@@ -78,9 +78,6 @@
     <Filter Include="Object\Enemy\Flash">
       <UniqueIdentifier>{4a454c93-f88e-4dfd-b31a-47d6ec025b5e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Enemy\Wave">
-      <UniqueIdentifier>{b07cac9f-7bb5-4fed-a8fe-2a29e918d969}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Object\Player\Bullet">
       <UniqueIdentifier>{9aeec6ba-b980-46c0-8820-34a93bba8e85}</UniqueIdentifier>
     </Filter>
@@ -95,6 +92,9 @@
     </Filter>
     <Filter Include="Object\Item">
       <UniqueIdentifier>{cb5507dd-dd7c-45ce-b0bd-fa3f3ccc3f99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Wave">
+      <UniqueIdentifier>{b07cac9f-7bb5-4fed-a8fe-2a29e918d969}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

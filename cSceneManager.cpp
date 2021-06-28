@@ -67,6 +67,9 @@ void cSceneManager::ChangeScene(string key)
 
 void cSceneManager::Add()
 {
+	RENDER->AddTexture("PurifiedCarry", "Enemy/PurifiedCarry");
+	RENDER->AddTexture("PurifiedWaveE", "Enemy/PurifiedWaveE");
+	RENDER->AddTexture("PurifiedDivider", "Enemy/PurifiedDivider");
 	RENDER->AddTexture("Back", "Background/Back", 3);
 	RENDER->AddTexture("Virus", "Background/Virus", 3);
 	RENDER->AddTexture("Line", "Background/Line");

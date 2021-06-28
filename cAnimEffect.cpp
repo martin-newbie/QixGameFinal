@@ -3,7 +3,7 @@
 
 void cAnimEffect::Init()
 {
-	vTex = RENDER->VecTexture("Expl", 32);
+	vTex = RENDER->VecTexture("Smoke", 32);
 }
 
 void cAnimEffect::Update()

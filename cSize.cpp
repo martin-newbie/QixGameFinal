@@ -3,7 +3,20 @@
 
 void cSize::Init()
 {
-	pTex = RENDER->GetTexture("Size");
+	switch (GAME->Stage)
+	{
+	case Carry:
+		pTex = RENDER->GetTexture("WaterEnemy1");
+		break;
+	case Wave:
+		pTex = RENDER->GetTexture("FireEnemy1");
+		break;
+	case Divide:
+		pTex = RENDER->GetTexture("FireEnemy1");
+		break;
+	default:
+		break;
+	}
 	Stage();
 	ColliderSet(20, this);
 	fSpeed = 5.f;
@@ -26,7 +39,8 @@ void cSize::Update()
 
 void cSize::Render()
 {
-	RENDER->Render(pTex, vPos, fRot, 0.5f, color);
+	if(!GAME->isBossDead)
+		RENDER->Render(pTex, vPos, fRot, 0.5f);
 }
 
 void cSize::Release()

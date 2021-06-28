@@ -3,7 +3,20 @@
 
 void cFlash::Init()
 {
-	pTex = RENDER->GetTexture("Flash");
+	switch (GAME->Stage)
+	{
+	case Carry:
+		pTex = RENDER->GetTexture("WaterEnemy0");
+		break;
+	case Wave:
+		pTex = RENDER->GetTexture("FireEnemy0");
+		break;
+	case Divide:
+		pTex = RENDER->GetTexture("FireEnemy0");
+		break;
+	default:
+		break;
+	}
 	fSize = (float)(rand() % 8 + 7) / 10;
 	prevSize = fSize;
 	Stage();
@@ -19,7 +32,8 @@ void cFlash::Update()
 
 void cFlash::Render()
 {
-	RENDER->Render(pTex, vPos, 0, fSize, color);
+	if(!GAME->isBossDead)
+		RENDER->Render(pTex, vPos, 0, fSize, color);
 }
 
 void cFlash::Release()

@@ -349,6 +349,23 @@ void cBoss::Dead()
 		break;
 	case 1:
 		CAMERA->ZoomIn(vPos, 2);
+		if (CAMERA->fScale > 1.85)
+		{
+			switch (GAME->Stage)
+			{
+			case Carry:
+				pTex = RENDER->GetTexture("PurifiedCarry");
+				break;
+			case Wave:
+				pTex = RENDER->GetTexture("PurifiedWaveE");
+				break;
+			case Divide:
+				pTex = RENDER->GetTexture("PurifiedDivider");
+				break;
+			default:
+				break;
+			}
+		}
 		if (CAMERA->fScale > 1.98) {
 			nEvent++;
 		}

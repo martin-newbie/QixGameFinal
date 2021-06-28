@@ -15,7 +15,7 @@ void cMain::Init()
 	SCENE->AddScene("Title", new cTitle());
 	SCENE->AddScene("Check", new cCheck());
 	SCENE->AddScene("Ending", new cEnding());
-	SCENE->ChangeScene("Intro");
+	SCENE->ChangeScene("Title");
 }
 
 void cMain::Update()

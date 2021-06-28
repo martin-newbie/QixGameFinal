@@ -44,7 +44,10 @@ void cIngame::Update()
 		if (GAME->Stage == 2)
 			SCENE->ChangeScene("Ending");
 		else
-			SCENE->ChangeScene("Check");
+		{
+			GAME->Stage++;
+			SCENE->ChangeScene("InGame");
+		}
 	}
 }
 

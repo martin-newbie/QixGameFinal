@@ -141,8 +141,8 @@ INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
     DXUTInit( true, true ); // Parse the command line and show msgboxes
     DXUTSetHotkeyHandling( true, true, true );  // handle the default hotkeys
     DXUTSetCursorSettings( false, false ); // Show the cursor and clip it when in full screen
-    DXUTCreateWindow( L"AntiVirus" );
-    DXUTCreateDevice( false, WINSIZEX, WINSIZEY);
+    DXUTCreateWindow( L"PurifyTheFairy" );
+    DXUTCreateDevice( true, WINSIZEX, WINSIZEY);
 
     // Start the render loop
     DXUTMainLoop();

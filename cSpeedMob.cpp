@@ -6,7 +6,20 @@ void cSpeedMob::Init()
 	Stage();
 	ColliderSet(10, this);
 	vDir = Rot2Vec(rand()%360);
-	pTex = RENDER->GetTexture("Speed");
+	switch (GAME->Stage)
+	{
+	case Carry:
+		pTex = RENDER->GetTexture("WaterEnemy2");
+		break;
+	case Wave:
+		pTex = RENDER->GetTexture("FireEnemy2");
+		break;
+	case Divide:
+		pTex = RENDER->GetTexture("FireEnemy2");
+		break;
+	default:
+		break;
+	}
 	fSpeed = 7.f;
 }
 
@@ -27,7 +40,8 @@ void cSpeedMob::Update()
 
 void cSpeedMob::Render()
 {
-	RENDER->Render(pTex, vPos, fRot, 0.5f, color);
+	if (!GAME->isBossDead)
+		RENDER->Render(pTex, vPos, fRot, 0.5f);
 }
 
 void cSpeedMob::Release()
